@@ -1,5 +1,5 @@
 #Enter monthly income and monthly expenses
-monthly_income = int(input("enter your monthly income "))
+monthly_income = int(input("Enter your monthly income "))
 monthly_expenses = int(input("Enter your total monthly expenses "))
 
 #Calculate monthly savings and projected savings for one year
