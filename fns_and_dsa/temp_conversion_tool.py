@@ -5,7 +5,7 @@ def convert_to_celsius(fahrenheit):
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
-    return (celsius * CELSIUS_TO_FAHRENHEIT) + 32
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 temperature_input = input("Enter the temperature value: ")
 scale = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
