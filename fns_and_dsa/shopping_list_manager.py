@@ -22,10 +22,10 @@ def view_list():
         print("\nThe Shopping List is empty.")
 
 def display_menu():
-    print("\n=== Shoppin List Menu ===")
-    print("1. Add an item")
-    print("2. Remove an item")
-    print("3. View the list")
+    print("\n=== Shoppin List Manager ===")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
     print("4. Exit")
 
 def main():
@@ -40,10 +40,10 @@ def main():
         elif choice  == "3":
             view_list()
         elif choice == "4":
-            print("Thankyou for using the shopping list application. Goodbye!")
+            print("Goodbye!")
             break
         else:
-            print("Invalid choice. Please enter a number between 1 and 4.")
+            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
