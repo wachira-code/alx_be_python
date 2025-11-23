@@ -13,7 +13,7 @@ scale = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().u
 try:
     temperature_value = float(temperature_input)
 except ValueError:
-    raise ValueError("Invalid temperature. Please enter a numerical value.")
+    raise ValueError("Invalid temperature. Please enter a numeric value.")
 
 if scale == "C":
     result = convert_to_fahrenheit(temperature_value)
