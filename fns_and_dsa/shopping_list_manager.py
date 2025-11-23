@@ -22,7 +22,7 @@ def view_list():
         print("\nThe Shopping List is empty.")
 
 def display_menu():
-    print("\nShopping List Manager")
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -31,7 +31,7 @@ def display_menu():
 def main():
     while True:
         display_menu()
-        choice = input("\Enter your choice(1 - 4): ")
+        choice = input("Enter your choice(1 - 4): ")
 
         if choice == "1":
             add_item()
