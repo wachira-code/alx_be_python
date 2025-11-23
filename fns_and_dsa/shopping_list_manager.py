@@ -22,7 +22,7 @@ def view_list():
         print("\nThe Shopping List is empty.")
 
 def display_menu():
-    print("\n=== Shoppin List Manager ===")
+    print("\n=== Shopping List Manager ===")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
