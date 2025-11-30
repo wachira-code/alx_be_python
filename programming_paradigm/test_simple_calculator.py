@@ -6,75 +6,38 @@ class TestSimpleCalculator(unittest.TestCase):
         self.calc = SimpleCalculator()
 
     #tests for addition
-    def test_add_positive_numbers(self):
-        result = self.calc.add(5, 3)
-        self.assertEqual(result, 8)
-
-    def test_add_negative_numbers(self):
-        result = self.calc.add(-5, -3)
-        self.assertEqual(result, -8)
-
-    def test_add_mixed_numbers(self):
-        result = self.calc.add(5, -4)
-        self.assertEqual(result, 1)
+    def test_addition(self):
+        self.assertEqual(self.calc.add(5,2), 7)
+        self.assertEqual(self.calc.add(-5, 2), 3)
+        self.assertEqual(self.calc.add(0, 0), 0)
+        self.assertEqual(self.calc.add(2.5, 3.6), 6.1)
+        self.assertEqual(self.calc.add(-5,-2), -7)
 
     #tests for subtraction
-    def test_subtract_positive_numbers(self):
-        result = self.calc.subtract(10, 4)
-        self.assertEqual(result, 6)
+    def test_subtraction(self):
+        self.assertEqual(self.calc.subtract(5,3), 2)
+        self.assertEqual(self.calc.subtract(5, 10), -5)
+        self.assertEqual(self.calc.subtract(5.5, 2.5), 3)
+        self.assertEqual(self.calc.subtract(-5, -5), -10)
+        self.assertEqual(self.calc.subtract(-5, 3), -8)
 
-    def test_subtract_negative_numbers(self):
-        result = self.calc.subtract(-10, -5)
-        self.assertEqual(result, -5)
-    
-    def test_subtract_mixed_numbers(self):
-        result = self.calc.subtract(-10, 5)
-        self.assertEqual(result, -15)
-    def test_subtract_result_negative(self):
-        result = self.calc.subtract(5, 10)
-        self.assertEqual(result, -5)
-    
     #test for multiplication
-    def test_multiply_positive_numbers(self):
-        result = self.calc.multiply(10, 5)
-        self.assertEqual(result, 50)
-
-    def test_multiply_negative_numbers(self):
-        result = self.calc.multiply(-10, -5)
-        self.assertEqual(result, 50)
-
-    def test_multiply_mixed_numbers(self):
-        result = self.calc.multiply(10, -5)
-        self.assertEqual(result, -50)
-    
-    def test_multiply_by_zero(self):
-        result = self.calc.multiply(10, 0)
-        self.assertEqual(result, 0)
+    def test_multiplication(self):
+        self.assertEqual(self.calc.multiply(5, 6), 30)
+        self.assertEqual(self.calc.multiply(5, -6), -30)
+        self.assertEqual(self.calc.multiply(-5, -6), 30)
+        self.assertEqual(self.calc.multiply(5, 0), 0)
     
     #tests for division
-    def test_divide_positive_numbers(self):
-        result = self.calc.divide(10, 5)
-        self.assertEqual(result, 2)
-
-    def test_divide_negative_numbers(self):
-        result = self.calc.divide(-10, -5)
-        self.assertEqual(result, 2)
-
-    def test_divide_mixed_numbers(self):
-        result = self.calc.divide(10, -5)
-        self.assertEqual(result,-2)
+    def test_division(self):
+        self.assertEqual(self.calc.divide(10, 5), 2)
+        self.assertEqual(self.calc.divide(10, -5,), -2)
+        self.assertEqual(self.calc.divide(-10, -5), 2)
+        self.assertEqual(self.calc.divide(10, 2.5), 4)
 
     def test_divide_by_zero(self):
-        result = self.calc.divide(10, 0)
-        self.assertIsNone(result)
-
-    def test_divide_zero_by_number(self):
-        result = self.calc.divide(0, 10)
-        self.assertEqual(result, 0)
-    
-    def test_divide_with_decimal_result(self):
-        result = self.calc.divide(7, 2)
-        self.assertEqual(result, 3.5)
+        self.assertIsNone(self.calc.divide(5, 0))
+        self.assertIsNone(self.calc.divide(0, 0))
 
     if __name__ == "__main__":
         unittest.main()
