@@ -48,7 +48,7 @@ class Library:
             return
         
         for i, book in enumerate(self.books, 1):
-            print(f"{i}. {book}")
+            print(f"{book}")
         
 
     def __len__(self):
