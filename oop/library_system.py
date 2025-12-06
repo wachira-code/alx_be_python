@@ -15,7 +15,7 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB)"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
     
     def __repr__(self):
         return f"EBook('{self.title}', '{self.author}', {self.file_size})"
@@ -46,12 +46,10 @@ class Library:
         if not self.books:
             print("The library is empty.")
             return
-        print(f"\n{'=' * 60}")
-        print(f"Library Collection ({len(self.books)} book(s)):")
-        print(f"{'=' * 60}")
+        
         for i, book in enumerate(self.books, 1):
             print(f"{i}. {book}")
-        print(f"{'=' * 60}\n")
+        
 
     def __len__(self):
         return len(self.books)
